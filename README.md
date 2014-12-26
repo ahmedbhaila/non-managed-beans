@@ -1,6 +1,6 @@
 non-managed-beans
 =================
 
-Using spring managed beans inside a non-managed object
+Using a Spring bean from a non-managed object
 
-For the weaving to work dont forget to use -javaagent:/path/to/spring-instrument.jar
+Spring uses runtime AspectJ weaving for this to work, use -javaagent:/path/to/spring-instrument.jar when running
