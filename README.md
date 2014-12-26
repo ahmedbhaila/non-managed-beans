@@ -12,9 +12,12 @@ If you want to use a Spring injected bean from a non-managed object, Spring can 
 How?
 - Mark the non-managed class with @Configurable annotation. This tells spring that the class object will use spring managed beans. Spring uses AspectJ magic to acheive this. 
 
-- Mark JavaConfig class with these annotations:--
+- Mark JavaConfig class with these annotations:
+--
 
    @EnableLoadTimeWeaving(aspectjWeaving=AspectJWeaving.ENABLED)
+--
+
    @EnableSpringConfigured
 
 - Since spring uses runtime AspectJ weaving for this to work, use -javaagent:/path/to/spring-instrument.jar when running the application
